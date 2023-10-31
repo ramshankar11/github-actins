@@ -23,11 +23,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: git cmds
         run: |
-          git fetch origin main
           git pull
+          git merge
+          echo "main branch commits"
           git log
           git checkout feature/branch1
           git pull
+          echo "feature commits"
           git log
           git merge main
       # # Runs a single command using the runners shell
