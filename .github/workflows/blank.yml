@@ -24,8 +24,10 @@ jobs:
       - name: git cmds
         run: |
           git pull
+          git log
           git checkout feature/branch1
-          git rebase main
+          git pull
+          git log
           git merge main
       # # Runs a single command using the runners shell
       # - name: Git cmds
