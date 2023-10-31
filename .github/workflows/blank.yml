@@ -27,11 +27,14 @@ jobs:
       - name: Git cmds
         run: |
           git fetch
+          git checkout main
           git pull
           git checkout feature/branch1
+          git pull
           git merge main 
           git push
           git checkout feature/branch1
+          git pull
           git merge main 
           git push
 
