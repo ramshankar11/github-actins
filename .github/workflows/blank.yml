@@ -29,7 +29,7 @@ jobs:
           git fetch
           git checkout main
           git pull
-          git push -f
+          git push
           git checkout feature/branch1
           git pull
           git merge main 
