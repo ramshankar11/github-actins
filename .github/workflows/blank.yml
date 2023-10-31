@@ -25,9 +25,9 @@ jobs:
           fetch-depth: 0
       - name: git cmds
         run: |
-          git fetch --all
-          echo "main branch commits"
-          git log 
+          git fetch
+          git checkout feature/branch1
+          git merge main
       # # Runs a single command using the runners shell
       # - name: Git cmds
       #   run: |
