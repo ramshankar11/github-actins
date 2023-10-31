@@ -27,7 +27,7 @@ jobs:
           git fetch origin main
           git merge origin/main
           echo "main branch commits"
-          git log
+          git log --all
       # # Runs a single command using the runners shell
       # - name: Git cmds
       #   run: |
