@@ -24,7 +24,8 @@ jobs:
       - name: clone repo
         run: |
           git clone git@github.com:ramshankar11/github-actins.git poc
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # # Runs a single command using the runners shell
       # - name: Git cmds
       #   run: |
