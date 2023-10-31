@@ -28,13 +28,10 @@ jobs:
           git fetch
           git checkout main
           git pull
-          git push
           git checkout feature/branch1
-          git pull
           git merge main 
           git push
-          git checkout feature/branch1
-          git pull
+          git checkout feature/branch2
           git merge main 
           git push
         working-directory: /home/ramshankar06042000/actions-runner/poc
