@@ -22,11 +22,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: main  # Adjust this to your desired branch
+          path: merge-features
       # Runs a single command using the runners shell
       - name: Git cmds
         run: |
-          git fetch
-          git checkout main
           git pull
           git checkout feature/branch1
           git merge main 
@@ -34,4 +35,4 @@ jobs:
           git checkout feature/branch2
           git merge main 
           git push
-        working-directory: /home/ramshankar06042000/actions-runner/poc
+        working-directory: merge-features
