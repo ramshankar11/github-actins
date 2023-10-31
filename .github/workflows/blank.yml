@@ -24,6 +24,7 @@ jobs:
       - name: git cmds
         run: |
           git checkout main
+          git fetch origin main
           git pull
           git merge
           echo "main branch commits"
