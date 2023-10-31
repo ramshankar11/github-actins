@@ -16,23 +16,23 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: clone repo
         run: |
-          git clone git@github.com:ramshankar11/github-actins.git /home/ramshankar06042000/actions-runner/merge
+          git clone git@github.com:ramshankar11/github-actins.git poc
 
-      # Runs a single command using the runners shell
-      - name: Git cmds
-        run: |
-          git pull
-          git checkout feature/branch1
-          git merge main 
-          git push
-          git checkout feature/branch2
-          git merge main 
-          git push
-        working-directory: /home/ramshankar06042000/actions-runner/merge
+      # # Runs a single command using the runners shell
+      # - name: Git cmds
+      #   run: |
+      #     git pull
+      #     git checkout feature/branch1
+      #     git merge main 
+      #     git push
+      #     git checkout feature/branch2
+      #     git merge main 
+      #     git push
+      #   working-directory: /home/ramshankar06042000/actions-runner/merge
