@@ -21,10 +21,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          ref: main  # Adjust this to your desired branch
-          path: merge-features
+      - name: clone repo
+        run: |
+          git clone git@github.com:ramshankar11/github-actins.git /home/ramshankar06042000/actions-runner/merge
+
       # Runs a single command using the runners shell
       - name: Git cmds
         run: |
@@ -35,4 +35,4 @@ jobs:
           git checkout feature/branch2
           git merge main 
           git push
-        working-directory: merge-features
+        working-directory: /home/ramshankar06042000/actions-runner/merge
