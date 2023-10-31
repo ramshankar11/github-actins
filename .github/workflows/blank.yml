@@ -17,15 +17,15 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: clone repo
         run: |
           git clone git@github.com:ramshankar11/github-actins.git poc
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # # Runs a single command using the runners shell
       # - name: Git cmds
       #   run: |
