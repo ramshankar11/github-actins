@@ -27,7 +27,12 @@ jobs:
       - name: Git cmds
         run: |
           git fetch
-          git merge origin/feature/branch1 --no-edit
+          git pull
+          git checkout feature/branch1
+          git merge main 
+          git push
+          git checkout feature/branch1
+          git merge main 
           git push
 
       # Runs a set of commands using the runners shell
