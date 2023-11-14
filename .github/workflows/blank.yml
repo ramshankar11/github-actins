@@ -4,9 +4,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: feature/branch1|main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,19 +22,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: git cmds
-        run: |
-          git fetch
-          git checkout feature/branch1
-          git merge main
-          git push
-      # # Runs a single command using the runners shell
-      # - name: Git cmds
-      #   run: |
-      #     git pull
-      #     git checkout feature/branch1
-      #     git merge main 
-      #     git push
-      #     git checkout feature/branch2
-      #     git merge main 
-      #     git push
-      #   working-directory: /home/ramshankar06042000/actions-runner/merge
+        run: git --version
